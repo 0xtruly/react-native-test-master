@@ -7,22 +7,40 @@ import PropTypes from 'prop-types';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    marginVertical: 15,
   },
   content: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingHorizontal: 15,
   },
   avatarContainer: {
     overflow: 'hidden',
-    width: 300,
-    height: 300,
-    borderRadius: 50,
+    width: 100,
+    height: 100,
+    borderRadius: 150,
+    backgroundColor: '#eee',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginHorizontal: 5,
   },
   avatar: {
     resizeMode: 'contain',
+    width: 100,
+    height: 100,
   },
   text: {
-    fontSize: 14,
+    fontSize: 18,
+    marginLeft: 15,
+  },
+  divider: {
+    width: '90%',
+    borderColor: '#eee',
+    opacity: 0.5,
+    alignSelf: 'center',
+    borderBottomWidth: 1,
+    marginTop: 10,
+
   },
 });
 const UserCard = ({ firstName, lastName, avatar }) => (
@@ -33,7 +51,7 @@ const UserCard = ({ firstName, lastName, avatar }) => (
       </View>
       <Text allowFontScaling={false} style={styles.text}>{`${firstName} ${lastName}`}</Text>
     </View>
-    <View />
+    <View style={styles.divider} />
   </View>
 );
 
