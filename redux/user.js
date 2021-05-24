@@ -19,12 +19,12 @@ const fetchUserError = (error) => ({
   type: FETCH_USERS_ERROR,
 });
 
-const initializeFetchUserRequest = (page = 1) => async (dispatch) => {
+const initializeFetchUserRequest = (page) => async (dispatch) => {
   dispatch(fetchUserRequest());
   try {
     axios({
       method: 'get',
-      url: `https://reqres.in/api/users?${page}`,
+      url: `https://reqres.in/api/users?page=${page}`,
     })
       .then((res) => {
         if (res.status === 200) {
@@ -41,8 +41,8 @@ const initialState = {
   fetch: {
     loading: false,
     loaded: false,
-    userData: null,
     error: false,
+    userData: [],
     errorData: null,
   },
 };

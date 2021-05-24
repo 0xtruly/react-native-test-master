@@ -7,17 +7,18 @@ import PropTypes from 'prop-types';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginVertical: 15,
+    marginVertical: 3,
   },
   content: {
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: 15,
+    paddingVertical: 12,
   },
   avatarContainer: {
     overflow: 'hidden',
-    width: 100,
-    height: 100,
+    width: 90,
+    height: 90,
     borderRadius: 150,
     backgroundColor: '#eee',
     justifyContent: 'center',
@@ -26,20 +27,21 @@ const styles = StyleSheet.create({
   },
   avatar: {
     resizeMode: 'contain',
-    width: 100,
-    height: 100,
+    width: 90,
+    height: 90,
   },
   text: {
     fontSize: 18,
     marginLeft: 15,
   },
   divider: {
-    width: '90%',
-    borderColor: '#eee',
+    width: '96%',
+    borderColor: '#999595',
     opacity: 0.5,
     alignSelf: 'center',
-    borderBottomWidth: 1,
+    borderBottomWidth: 0.5,
     marginTop: 10,
+    marginLeft: 5,
 
   },
 });
