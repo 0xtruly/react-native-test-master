@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import Users from '../../screens/users/Users';
-import Initial from '../../screens/users/Initial';
+import Initial from '../../screens/Initial';
 
 const Stack = createStackNavigator();
 

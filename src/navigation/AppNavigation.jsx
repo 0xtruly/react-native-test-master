@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import MainStack from './stack/UserStack';
+import MainStack from './stack/MainStack';
 
-const MainApp = () => (
+const AppNavigation = () => (
   <NavigationContainer>
     <MainStack />
   </NavigationContainer>
 );
-export default MainApp;
+export default AppNavigation;
