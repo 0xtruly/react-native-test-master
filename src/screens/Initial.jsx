@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import Loader from '../../components/Loader';
+import Loader from '../components/Loader';
 
 const Initial = ({ navigation }) => {
   const [loaderVisible, setLoaderVisible] = useState(true);
