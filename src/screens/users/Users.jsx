@@ -4,7 +4,7 @@ import {
   SafeAreaView, ScrollView, StyleSheet, View, Text,
 } from 'react-native';
 import UserCard from '../../components/UserCard';
-import { initializeFetchUserRequest } from '../../../redux/user';
+import { initializeFetchUserRequest } from '../../redux/user';
 
 const styles = StyleSheet.create({
   container: {
@@ -46,6 +46,13 @@ const Users = () => {
     if (scrolledToBottom >= (contentHeight - 10) && page < totalPages && allUsers.length < total) {
       setCurrentPage(() => currentPage + 1);
     }
+
+    if (scrolledToBottom >= (contentHeight) && allUsers.length === total) {
+      setShowIndicator(true);
+      setTimeout(() => {
+        setShowIndicator(false);
+      }, 3000);
+    }
   };
 
   useEffect(() => {
@@ -57,15 +64,6 @@ const Users = () => {
       setAllUsers([...allUsers, ...data]);
     }
   }, [userData, data]);
-
-  useEffect(() => {
-    if (allUsers.length === total) {
-      setShowIndicator(true);
-      setTimeout(() => {
-        setShowIndicator(false);
-      }, 5000);
-    }
-  }, [allUsers, total]);
 
   const renderUsers = () => (
     <ScrollView

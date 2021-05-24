@@ -11,7 +11,7 @@ import {
   SafeAreaView,
 } from 'react-native';
 import { Provider } from 'react-redux';
-import store from './redux';
+import store from './src/redux';
 import AppNavigation from './src/navigation/AppNavigation';
 
 const App = () => (
